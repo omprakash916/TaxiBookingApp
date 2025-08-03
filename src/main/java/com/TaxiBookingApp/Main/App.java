@@ -10,7 +10,7 @@ public class App {
         
     	java.io.BufferedReader reader = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));
     	
-    	System.out.println("Welcome to the Taxi Booking App!");
+    	System.out.println("Welcome to the Taxi Booking App!"); 
 		System.out.println("Type 'exit' to quit the application.");
 		
 		String inputLine;
