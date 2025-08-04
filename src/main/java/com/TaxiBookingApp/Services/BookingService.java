@@ -27,7 +27,7 @@ public class BookingService {
 		if (instance == null) {
 			instance = new BookingService();
 		}
-		return null;
+		return instance;
 	}
 }
 
