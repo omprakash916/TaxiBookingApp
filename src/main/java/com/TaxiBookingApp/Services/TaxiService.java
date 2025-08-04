@@ -101,8 +101,8 @@ public class TaxiService {
 	        }
 
 	        int pickupTime = requestTime; // Assuming the pickup time is the request time
-	        if (pickupTime < 0) {
-	            System.out.println("Invalid pickup time.");
+	        if (pickupTime < 0 || pickupTime > 23) {
+	            System.out.println("Invalid pickup time. Please provide a time between 0 and 23.");
 	            return;
 	        }
 
@@ -123,7 +123,5 @@ public class TaxiService {
 	        Booking booking = new Booking(bookingId, customerId, pickup, drop, pickupTime, dropTime, amount);
 	        selectedTaxi.addBooking(booking);
 	    }	
-	
-
-	
+		
 }

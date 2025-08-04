@@ -4,11 +4,14 @@ import com.TaxiBookingApp.Handlers.CommandHandler;
 import com.TaxiBookingApp.Services.TaxiService;
 
 public class BookTaxiCommand implements CommandHandler {
+	
+	public final String BookTaxiCommand = "BOOKTAXI";
+	
 	@Override
 	public void execute(String[] args) {
 		
 		if (args.length < 4) {
-			System.out.println("Usage: BOOKTAXI <pickupTime> <pickupLocation> <dropLocation> <customerId>");
+			System.out.println("Usage: "+BookTaxiCommand+" <pickupTime> <pickupLocation> <dropLocation> <customerId>");
 			return;
 		}
 		

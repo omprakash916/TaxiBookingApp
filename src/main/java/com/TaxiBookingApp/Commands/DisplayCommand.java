@@ -4,6 +4,9 @@ import com.TaxiBookingApp.Handlers.CommandHandler;
 import com.TaxiBookingApp.Services.BookingService;
 
 public class DisplayCommand implements CommandHandler {
+	
+	public final String DisplayCommand = "DISPLAYBOOKINGS";
+	
 	@Override
 	public void execute(String[] args) {
 		

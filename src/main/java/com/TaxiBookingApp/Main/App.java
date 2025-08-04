@@ -21,14 +21,16 @@ public class App {
 				if (inputLine == null || inputLine.equalsIgnoreCase("EXIT")) {
 					break;
 				}
-				
+
 				// Dispatch the command
 				CommandDispatcher dispatcher = new CommandDispatcher();
 				dispatcher.dispatch(inputLine);
-				
-			} catch (java.io.IOException e) {
-				System.err.println("Error reading input: " + e.getMessage());
-			}
+
+			} catch (Exception e) { // Catch all exceptions
+                System.err.println("An error occurred: " + e.getMessage());
+                e.printStackTrace(); // Optional: print stack trace for debugging
+                System.out.println("Please try again.");
+            }
 		}
 		
 		System.out.println("Thank you for using the Taxi Booking App!");

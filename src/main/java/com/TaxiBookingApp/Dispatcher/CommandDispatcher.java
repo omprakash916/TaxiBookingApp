@@ -14,9 +14,14 @@ public class CommandDispatcher {
 	
 	public CommandDispatcher() {
 		// Register commands here
-		commandMap.put("BOOKTAXI", new BookTaxiCommand());
-		commandMap.put("DISPLAYBOOKINGS", new DisplayCommand());
-		commandMap.put("INITIALIZE", new InitTaxiCommand());
+		BookTaxiCommand bookTaxiCommand = new BookTaxiCommand();
+		DisplayCommand displayCommand = new DisplayCommand();
+		InitTaxiCommand initTaxiCommand = new InitTaxiCommand();
+		
+		
+		commandMap.put(bookTaxiCommand.BookTaxiCommand, bookTaxiCommand);
+		commandMap.put(displayCommand.DisplayCommand, displayCommand);
+		commandMap.put(initTaxiCommand.InitTaxiCommand, initTaxiCommand);
 	}
 	
 	public void dispatch(String inputLine) {
@@ -35,6 +40,7 @@ public class CommandDispatcher {
 			handler.execute(args);
 		} else {
 			System.out.println("Input Command not recognized: " + command);
+			System.out.println("Available commands: " + commandMap.keySet());
 		}
 		
 	}

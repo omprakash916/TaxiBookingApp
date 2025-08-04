@@ -5,11 +5,13 @@ import com.TaxiBookingApp.Model.Location;
 import com.TaxiBookingApp.Services.TaxiService;
 
 public class InitTaxiCommand implements CommandHandler {
+	public final String InitTaxiCommand = "INITTAXI";
+	
 	@Override
 	public void execute(String[] args) {
 		
 		if(args.length < 1) {
-			System.out.println("Usage: INITTAXI <numberOfTaxis> <initialLocation(optional)>");
+			System.out.println("Usage: "+InitTaxiCommand+" <numberOfTaxis> <initialLocation(optional)>");
 			return;
 		}
 		
