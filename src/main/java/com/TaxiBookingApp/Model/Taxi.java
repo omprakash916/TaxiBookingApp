@@ -49,6 +49,6 @@ public class Taxi {
 
 		public void setTotalEarnings(int totalEarnings) {
 			this.totalEarnings = totalEarnings;
-		}
+		} 
 		
 }
