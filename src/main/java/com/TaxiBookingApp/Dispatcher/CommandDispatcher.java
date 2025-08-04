@@ -6,6 +6,7 @@ import java.util.Map;
 
 import com.TaxiBookingApp.Commands.BookTaxiCommand;
 import com.TaxiBookingApp.Commands.DisplayCommand;
+import com.TaxiBookingApp.Commands.InitTaxiCommand;
 import com.TaxiBookingApp.Handlers.CommandHandler;
 
 public class CommandDispatcher {
@@ -15,6 +16,7 @@ public class CommandDispatcher {
 		// Register commands here
 		commandMap.put("BOOKTAXI", new BookTaxiCommand());
 		commandMap.put("DISPLAYBOOKINGS", new DisplayCommand());
+		commandMap.put("INITIALIZE", new InitTaxiCommand());
 	}
 	
 	public void dispatch(String inputLine) {

@@ -3,8 +3,9 @@ package com.TaxiBookingApp.Services;
 import com.TaxiBookingApp.Entity.Booking;
 import com.TaxiBookingApp.Model.Taxi;
 public class BookingService {
+	private static BookingService instance;
 	
-	public static void displayBookings() {
+	public void displayBookings() {
 		// Display all bookings
 		System.out.println("Displaying all bookings:");
 		for (Taxi taxi : TaxiService.getInstance().getTaxis()) {
@@ -19,6 +20,14 @@ public class BookingService {
 		int distance = Math.abs(to - from)*15;
 		return 100 + Math.max(0, distance - 5) * 10;
 		}
+
+	public static BookingService getInstance() {
+		// TODO Auto-generated method stub
+		if (instance == null) {
+			instance = new BookingService();
+		}
+		return null;
+	}
 }
 
 

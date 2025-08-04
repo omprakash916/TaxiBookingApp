@@ -35,6 +35,8 @@ public class TaxiService {
 	
 	public boolean initializeTaxi(int taxiCount) {
 		// Initialize the taxi service with a default location
+		System.out.println("Taxi initialized with default location");
+		
 		return initializeTaxi(taxiCount, Location.getDefaultLocation());
 	}
 	
