@@ -11,7 +11,8 @@ public class BookingService {
 		for (Taxi taxi : TaxiService.getInstance().getTaxis()) {
 			System.out.println("Taxi ID: " + taxi.getTaxiId());
 			for (Booking booking : taxi.getBookings()) {
-				System.out.println("Booking ID: " + booking.getBookingId() + ", From: " + booking.getFrom() + ", To: " + booking.getTo() +"Pickup Time: "+ booking.getPickupTime() +"DropTime: "+booking.getDropTime() +", Total Earnings: " + taxi.getTotalEarnings());
+				System.out.println("Booking ID: " + booking.getBookingId() + ", From: " + booking.getFrom() + ", To: " + booking.getTo() +" Pickup Time: "+ booking.getPickupTime() +" DropTime: "+booking.getDropTime() +", Total Earnings: " + taxi.getTotalEarnings());
+				System.out.println();
 			}
 		}
 	}
@@ -26,7 +27,7 @@ public class BookingService {
 		if (instance == null) {
 			instance = new BookingService();
 		}
-		return null;
+		return instance;
 	}
 }
 

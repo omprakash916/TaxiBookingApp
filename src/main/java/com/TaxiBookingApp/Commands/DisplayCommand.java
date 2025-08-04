@@ -9,6 +9,6 @@ public class DisplayCommand implements CommandHandler {
 		
 		BookingService.getInstance().displayBookings();
 		
-		System.out.println("Displaying all bookings.");
+		//System.out.println("Displaying all bookings.");
 	}
 }
