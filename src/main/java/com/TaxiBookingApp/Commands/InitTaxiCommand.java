@@ -40,6 +40,6 @@ public class InitTaxiCommand implements CommandHandler {
 			
 		}
 		
-		System.out.println("Initialized " + numberOfTaxis);
+		System.out.println("Initialized " + numberOfTaxis + "taxis");
 	}
 }

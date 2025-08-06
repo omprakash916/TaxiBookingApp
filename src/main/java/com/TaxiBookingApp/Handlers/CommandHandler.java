@@ -1,5 +1,5 @@
 package com.TaxiBookingApp.Handlers;
 
 public interface CommandHandler {
-	void execute(String[] args);
+	abstract void execute(String[] args);
 }

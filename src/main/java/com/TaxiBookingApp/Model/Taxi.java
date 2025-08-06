@@ -12,6 +12,15 @@ public class Taxi {
 		
 		List<Booking> bookings = new ArrayList<>();
 		
+		public Taxi() {
+			this.taxiId = taxiIdGenerator++; // Increment the taxiId for each new Taxi instance
+		}
+		
+		public Taxi(Location location) {
+			this.taxiId = taxiIdGenerator++;
+			this.location = location;
+		}
+		
 		public List<Booking> getBookings() {
 			return bookings;
 		}
@@ -20,15 +29,6 @@ public class Taxi {
 			bookings.add(booking);
 			totalEarnings += booking.getAmount(); // Update total earnings when a booking is added
 			location = Location.valueOf(String.valueOf(booking.getTo())) ; // Update current location to the pickup location of the booking
-		}
-
-		public Taxi() {
-			this.taxiId = taxiIdGenerator++; // Increment the taxiId for each new Taxi instance
-		}
-		
-		public Taxi(Location location) {
-			this.taxiId = taxiIdGenerator++;
-			this.location = location;
 		}
 		
 		public int getTaxiId() {
